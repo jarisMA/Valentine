@@ -1,0 +1,163 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+ul,li{
+	list-style: none;
+}
+
+#content{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+.content-wrap{
+	position: relative;
+}
+
+.content-wrap > li{
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+button {
+        width: 100px;
+        height: 50px;
+    }
+    
+.button {
+    position: absolute;
+    bottom: 0;
+}
+
+.charector{
+	width: 151px;
+    height: 291px;
+    background: url(../images/boy.png) -0px -291px no-repeat;
+    position: absolute;
+    /* 设置一个元素的坐标 */
+    left: 6%;
+    top: 55%;
+}
+
+.slowWalk {
+    /* 填入动画样式规则 */
+    -webkit-animation-name:person-slow;
+    -webkit-animation-duration:950ms;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:steps(1,start);
+    -moz-animation-name:person-slow;
+    -moz-animation-duration:950ms;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:steps(1,start);
+    }
+    
+    /* 普通慢走 */
+@-webkit-keyframes person-slow {
+	0% {
+    	background-position: -0px -291px;
+	}
+	25% {
+    	background-position: -602px -0px;
+	}
+	50% {
+   	background-position: -302px -291px;
+	}
+	75% {
+    	background-position: -151px -291px;
+	}
+	100% {
+    	background-position: -0px -291px;
+	}
+}
+    
+@-moz-keyframes person-slow {
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+}
+
+/* 人物暂停 */
+.pauseWalk {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+}
+
+.boyOriginal{
+    background-position: -150px -0px;
+}
+
+/*带花*/
+@-webkit-keyframes person-flower-slow {
+    0% {
+        background-position: -453px -0px;
+    }
+    25% {
+        background-position: -904px -0px;
+    }
+    50% {
+        background-position: -451px -0px;
+    }
+    75% {
+     background-position: -753px -0px;
+    }
+    100% {
+        background-position: -300px -0px;
+    }
+}
+
+.slowFlowerWalk{
+    -webkit-animation-name: person-flower-slow;
+    -webkit-animation-duration: 950ms;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:steps(1,start);
+}
+
+/*男孩转身*/
+.boy-rotate {
+    -webkit-animation-name: boy-rotate;
+    -webkit-animation-duration: 850ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: step-start;
+    -webkit-animation-fill-mode: forwards;
+}
+   
+@-webkit-keyframes boy-rotate {
+    0% {
+        background-position: -603px -291px;
+    }
+    16.7% {
+        background-position: -150px -0px;
+    }
+    33.4% {
+        background-position: -453px -291px;
+    }
+    50.1% {
+        background-position: -0px -0px;
+       }
+    66.8% {
+        background-position: -903px -291px;
+    }
+    83.5% {
+        background-position: -753px -291px;
+    }
+    100% {
+        background-position: -603px -291px;
+    }
+}
